@@ -1,5 +1,8 @@
 # SweetStack
-Stack of integers implemented on a Linked List on C++
+Stack of integers implemented on a Linked List in C++
+
+Author: Rodrigo Ruiz Quevedo
+Start date: December 11th, 2018
 
 Developed originally on Visual Studio 2017
 This program contain;
