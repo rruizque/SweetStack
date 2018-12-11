@@ -9,6 +9,7 @@ This program contain;
 	- main.cpp some code to test and run the program.
 
 NOTE 1: Since the object is pointing to dynamic data, a "destructor" method has been implemented.
+
 NOTE 2: Since the object is pointing to dynamic data, we should implement the copy constructor and the overloaded assignment operator.
 
 To run the program in a command line first go to the folder where the files are saved;
