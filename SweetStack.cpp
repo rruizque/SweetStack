@@ -6,6 +6,7 @@ Start date: December 11, 2018
 */
 
 #include "SweetStack.h"
+#include <cstdlib>
 
 //constructor
 SweetStack::SweetStack()
@@ -15,7 +16,7 @@ SweetStack::SweetStack()
 	largest = 0;
 }
 
-void SweetStack::push(int32_t newData)
+void SweetStack::push(int newData)
 {
 	Node *newNode = new Node;	// creates a new node and a pointer to it
 	newNode->setLink(first);
@@ -44,7 +45,7 @@ void SweetStack::push(int32_t newData)
 	count++;				// updates the size of the stack
 }
 
-int32_t SweetStack::pop()
+int SweetStack::pop()
 {
 	if (first == NULL)
 	{
@@ -77,13 +78,13 @@ int32_t SweetStack::pop()
 }
 
 // size - returns the size of the stack
-int32_t SweetStack::size()
+int SweetStack::size()
 {
 	return count;
 }
 
 // max - returns the current max in 
-int32_t SweetStack::max()
+int SweetStack::max()
 {
 	if (first == NULL)
 	{
