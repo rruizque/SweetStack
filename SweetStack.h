@@ -11,22 +11,23 @@
 #include<iostream>
 #include <string>		// Needed so pointers can be NULL
 #include <cstdlib>
+#include <stdint.h>
 using namespace std;
 
 class Node 
 {
 public:
 	Node() : data(0), link(NULL) {}		// Default constructor
-	Node(int theData, Node *theLink) : data(theData), link(theLink) {}
+	Node(int32_t theData, Node *theLink) : data(theData), link(theLink) {}
 	// Accessors
 	Node *getLink() const { return link; }
-	int getData() const { return data; }
+	int32_t getData() const { return data; }
 	// Mutators
 	void setLink(Node *theLink) { link = theLink; }
-	void setData(int theData) { data = theData; }
+	void setData(int32_t theData) { data = theData; }
 	~Node(){}		// Destructor
 private:
-	int data;
+	int32_t data;
 	Node *link;		//points to the next node (NULL if is the last node)
 
 };
@@ -43,17 +44,17 @@ public:
 	SweetStack();
 		//Default constructor
 
-	void push(int newData);
+	void push(int32_t newData);
 		// push - Inserts a node to the front of the list
 		// @param int - value stored in the inserted node
 
-	int pop();
+	int32_t pop();
 		// pop - pops the top of the stack and returns it
 
-	int size();
+	int32_t size();
 		// size - returns the size of the stack
 
-	int max();
+	int32_t max();
 		// max - returns the current max in 
 
 	void print() const;
@@ -66,7 +67,7 @@ public:
 		//Destructor
 private:
 	Node *first;	//points to the first node in the list
-	int count;		//keeps track of the number of nodes (size of the List/Stack)
-	int largest;		// keeps track of the maximum value in the List/Satck
+	int32_t count;		//keeps track of the number of nodes (size of the List/Stack)
+	int32_t largest;		// keeps track of the maximum value in the List/Satck
 };
 #endif

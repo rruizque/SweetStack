@@ -16,7 +16,7 @@ SweetStack::SweetStack()
 	largest = 0;
 }
 
-void SweetStack::push(int newData)
+void SweetStack::push(int32_t newData)
 {
 	Node *newNode = new Node;	// creates a new node and a pointer to it
 	newNode->setLink(first);
@@ -30,7 +30,7 @@ void SweetStack::push(int newData)
 	{
 		if (newData > largest)		// larger than current max value
 		{
-			int flag = (2 * newData) - largest;		//create a flag value that indicates this the new mx and keeps track of the previous max
+			int32_t flag = (2 * newData) - largest;		//create a flag value that indicates this the new mx and keeps track of the previous max
 			newNode->setData(flag);					// set the data variable to flag value
 			largest = newData;						// set new max value
 		}
@@ -45,7 +45,7 @@ void SweetStack::push(int newData)
 	count++;				// updates the size of the stack
 }
 
-int SweetStack::pop()
+int32_t SweetStack::pop()
 {
 	if (first == NULL)
 	{
@@ -53,7 +53,7 @@ int SweetStack::pop()
 	}
 	else
 	{
-		int temp = first->getData();	// check if is a flag for max value
+		int32_t temp = first->getData();	// check if is a flag for max value
 		Node *current = first;			// new node pointing to the top
 		first = first->getLink();		// second node is the now on top of the stack
 
@@ -66,7 +66,7 @@ int SweetStack::pop()
 		}
 		else
 		{
-			int temp2 = largest;		// what it needs to return
+			int32_t temp2 = largest;		// what it needs to return
 			largest = (2 * largest) - temp;
 			count--;						// updates the size of the stack
 			delete current;
@@ -78,13 +78,13 @@ int SweetStack::pop()
 }
 
 // size - returns the size of the stack
-int SweetStack::size()
+int32_t SweetStack::size()
 {
 	return count;
 }
 
 // max - returns the current max in 
-int SweetStack::max()
+int32_t SweetStack::max()
 {
 	if (first == NULL)
 	{
