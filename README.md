@@ -1,5 +1,5 @@
 # SweetStack
-Stack of integers implemented on a Linked List in C++. Allows to keep track of the current bigest integer in the stack in O(1) runinig time.
+Stack of integers implemented on a Linked List in C++. Allows to keep track of the current bigest integer in the stack in O(1) runnig time.
 
 Author: Rodrigo Ruiz Quevedo
 Start date: December 11th, 2018
